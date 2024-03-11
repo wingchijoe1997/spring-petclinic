@@ -4,7 +4,11 @@ pipeline {
     triggers {
         cron('H/10 * * * 1')
     }
+   tools {
 
+        maven 'Maven 3.6.3'
+
+    }
     stages {
         stage('Checkout') {
             steps {
