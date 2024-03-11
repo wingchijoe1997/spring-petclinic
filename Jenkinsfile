@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     // Run Maven build and generate JaCoCo report
-                    sh 'mvn clean verify jacoco:report'
+                    bat 'mvn clean verify jacoco:report'
                 }
             }
         }
