@@ -27,7 +27,7 @@ pipeline {
         
         stage('Publish JaCoCo Report') {
             steps {
-                jacoco(execPattern: '**/target/site/jacoco/jacoco.xml')
+                jacoco execPattern: '**/target/jacoco.exec', classPattern: '**/classes', sourcePattern: '**/src/main/java'
             }
         }
         
